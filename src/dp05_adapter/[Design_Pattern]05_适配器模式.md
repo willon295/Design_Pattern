@@ -16,3 +16,93 @@ date: 2017-10-11 00:05:00
 3. 在 `需要兼容的类` 调用具体实现方法时，调用适配器的实现方法
 
 
+# 举个例子
+
+110V 转 220V
+
+1. 通用接口
+```
+public interface Charger {
+
+
+    void chargging(int dy);
+}
+
+```
+2. 具体实现类
+```
+public class USCharger implements Charger {
+
+ 
+    @Override
+    public void chargging(int dy) {
+        if (dy == 110) {
+            System.out.println("Chargging.." + dy);
+        } 
+    }
+}
+public class CNCharger implements Charger {
+
+    @Override
+    public void chargging(int dy) {
+
+        if (dy==220){
+            System.out.println("Chargging .. "+dy);
+        }else {
+            System.out.println("Cann't chargging .." +dy);
+        }
+
+    }
+}
+
+```
+3. 适配器
+```
+
+public class USChargerAdapter implements Charger {
+
+    private Charger charger;
+
+    public USChargerAdapter(int  dy) {
+        if (dy==110){
+            charger = new USCharger();
+        }else if (dy==220){
+            charger = new CNCharger();
+        }
+
+    }
+
+    @Override
+    public void chargging(int dy) {
+        charger.chargging(dy);
+    }
+}
+```
+4. 让需要转的类拥有此适配器
+```
+public class USCharger implements Charger {
+
+    USChargerAdapter adapter;
+
+    @Override
+    public void chargging(int dy) {
+        if (dy == 110) {
+            System.out.println("Chargging.." + dy);
+        } else if (dy == 220) {
+            adapter = new USChargerAdapter(dy);
+            adapter.chargging(dy);
+        }
+    }
+}
+```
+5. 测试类
+```
+public class ChargerTest {
+    public static void main(String[] args) {
+
+        USCharger usCharger = new USCharger();
+        usCharger.chargging(220);
+
+    }
+}
+```
