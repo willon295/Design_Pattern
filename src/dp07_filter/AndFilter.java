@@ -8,8 +8,8 @@ import java.util.List;
 public class AndFilter implements Filter {
 
     //持有两个过滤器
-    Filter filter;
-    Filter filter2;
+    private Filter filter;
+    private Filter filter2;
 
     public AndFilter(Filter filter, Filter filter2) {
         this.filter = filter;

@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * @author willon
- * @version 0.1.1-SNAPSHOT
- * @since 18-6-20
- */
+
 public class FemaleFilter implements Filter {
     @Override
     public List<Student> doFilter(List<Student> students) {

@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * @author willon
- * @version 0.1.1-SNAPSHOT
- * @since 18-6-20
+ * 男生信息过滤器
  */
 public class MaleFilter implements Filter {
 
