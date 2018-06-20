@@ -21,7 +21,7 @@ date: 2017-10-11 00:08:00
 
 
 1. 上图
-![](/images/dp08_composite_01.png)
+![图片](/images/dp08_composite_01.png)
 2. 上代码
 
 ```
