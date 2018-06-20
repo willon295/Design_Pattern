@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author willon
- * @version 0.1.1-SNAPSHOT
- * @since 18-6-20
+ * Created by willon on 18-19-06
  */
 public class HighScoreFilter implements Filter {
     @Override
