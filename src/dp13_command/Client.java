@@ -7,14 +7,19 @@ package dp13_command;
 public class Client {
     public static void main(String[] args) {
         TV tv = new TV();
-        Command on = new CommandON(tv);
-        Command off = new CommandOFF(tv);
-        Command change = new CommandChangeChannel(tv);
 
-        Controller controller = new Controller(on, off, change);
-        controller.turnON();
-        controller.change();
-        controller.turnOFF();
+        Controller controller = new Controller();
+
+
+        controller.setCommand(new CommandON(tv));
+        controller.execute();
+
+        controller.setCommand(new CommandOFF(tv));
+        controller.execute();
+
+        controller.setCommand(new CommandChangeChannel(tv));
+        controller.execute();
+
 
 
         /*运行结果

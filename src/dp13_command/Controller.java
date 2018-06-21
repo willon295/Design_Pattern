@@ -5,24 +5,14 @@ package dp13_command;
  */
 public class Controller {
 
-    //维护一系列的命令
-    private Command onCommand, offCommand, changeCommand;
+    //维护一个命令实例
+    private Command command;
 
-    public Controller(Command on, Command off, Command change) {
-        this.onCommand = on;
-        this.offCommand = off;
-        this.changeCommand = change;
+    public void setCommand(Command command) {
+        this.command = command;
     }
 
-
-    public void  turnON(){
-        onCommand.execute();
-    }
-    public void turnOFF(){
-        offCommand.execute();
-    }
-
-    public void change(){
-        changeCommand.execute();
+    public void execute(){
+        command.execute();
     }
 }
