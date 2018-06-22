@@ -14,10 +14,10 @@ public class Client {
         controller.setCommand(new CommandON(tv));
         controller.execute();
 
-        controller.setCommand(new CommandOFF(tv));
+        controller.setCommand(new CommandChangeChannel(tv));
         controller.execute();
 
-        controller.setCommand(new CommandChangeChannel(tv));
+        controller.setCommand(new CommandOFF(tv));
         controller.execute();
 
 
