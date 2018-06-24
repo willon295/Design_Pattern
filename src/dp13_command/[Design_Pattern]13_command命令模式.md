@@ -2,7 +2,7 @@
 title: '[Design_Pattern]13_command命令模式'
 category: 设计模式
 tag: 设计模式
-date: 2017-10-11 00:13:00
+date: 2018-06-10 00:13:00
 ---
 
 命令模式就是对命令的封装 (`行为模式` 的一种)，它主要将一条命令执行过程细分： 请求者（Invoker）、命令接口|基类（Command）、命令实现类（ConcreteCommand）、接收者（Receiver）.
