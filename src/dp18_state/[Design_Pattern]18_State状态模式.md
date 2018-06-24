@@ -122,9 +122,7 @@ public class ExhaustedState  implements State{
 
 ```
 - 测试类
-```$xslt
-
-
+```
 public class Main {
 
     public static void main(String[] args) {
