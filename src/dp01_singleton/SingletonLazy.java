@@ -10,7 +10,7 @@ public class SingletonLazy {
 
     private SingletonLazy() {
     }
-    public static SingletonLazy getInstance() {
+    public  synchronized static SingletonLazy getInstance() {
         if (instance == null) {
             instance =  new SingletonLazy();
         }
